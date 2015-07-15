@@ -1,0 +1,144 @@
+
+.ui-header .ui-title, .ui-footer .ui-title{
+ font-weight:normal
+}
+.dark-primary-color    { background: #E64A19; }
+.default-primary-color { background: #FF5722; }
+.light-primary-color   { background: #FFCCBC; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #536DFE; }
+.primary-text-color    { color: #212121;  }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #E5E4E2; }
+
+.slide.in {
+	    -webkit-transform: translateX(0);
+	    -webkit-animation-name: slideinfromright;
+	}
+
+	.slide.out {
+	    -webkit-transform: translateX(-100%);
+	    -webkit-animation-name: slideouttoleft;
+	}
+
+	@-webkit-keyframes slideinfromright {
+	    from { -webkit-transform: translateX(100%); }
+	    to { -webkit-transform: translateX(0); }
+	}
+	@-webkit-keyframes slideouttoleft {
+	    from { -webkit-transform: translateX(0); }
+	    to { -webkit-transform: translateX(-100%); }
+	}
+	
+.slide.in.reverse {
+		    -webkit-transform: translateX(0);
+		    -webkit-animation-name: slideinfromleft;
+		}
+
+		.slide.out.reverse {
+		    -webkit-transform: translateX(100%);
+		    -webkit-animation-name: slideouttoright;
+		}
+
+		@-webkit-keyframes slideinfromleft {
+		    from { -webkit-transform: translateX(-100%); }
+		    to { -webkit-transform: translateX(0); }
+		}
+
+		@-webkit-keyframes slideouttoright {
+		    from { -webkit-transform: translateX(0); }
+		    to { -webkit-transform: translateX(100%); }
+		}
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 150ms;
+}		
+
+.ui-btn-up-a {
+  border: 1px solid #FFFFFF;
+  font-weight: normal;
+}
+
+.ui-btn-up-b {
+  border-left: 0px solid #FFFFFF;
+  border-right: 0px solid #FFFFFF;
+  border-bottom:0px solid #E5E4E2;
+    border-top: 0px solid #FFFFFF;
+
+  font-weight: normal;
+}
+
+.title {
+    overflow: hidden;
+    color: #212121;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font-family: 'Roboto', sans-serif;
+	font-size:16px;
+	line-height:18px;
+}
+.description{
+    overflow: hidden;
+    color: #727272;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font-family: 'Roboto', sans-serif;
+	font-size:13px;
+	line-height:18px;
+
+}
+.ui-content {
+  border-width: 0;
+  overflow: visible;
+  overflow-x: hidden;
+   padding: 0em;
+}
+
+.circle{
+  position:relative;
+  width:40px;
+  height:40px;
+  float:left;
+	border: 1px solid #E5E4E2;
+  background:transparent none no-repeat center center;
+  background-size:cover;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.rec{
+  position:relative;
+  width:100%;
+  height:200px;
+  background:transparent none no-repeat center center;
+  background-size:cover;
+  overflow:hidden;
+}
+
+#pic1{
+  background-image: url('/css/images/bar.jpg');
+}
+#pic2{
+  background-image: url('/css/images/bar.jpg');
+}
+#pic3{
+  background-image: url('/css/images/google_map.png');
+}
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {
+   margin: 0em 0;
+}
+.ui-navbar li .ui-btn {
+  font-size: 14px;
+  display: block;
+  margin: 0;
+  border-right-width: 0;
+}
+
+
+.detailViewDivider {
+	border-bottom: 1px #E5E4E2 solid;
+}
+.ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>b.ui-btn {
+   border-width: 0px 0 0;
+  border-style: solid;
+}
