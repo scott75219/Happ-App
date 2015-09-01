@@ -1,4 +1,6 @@
+
 <html> 
+<script type="text/javascript" src="js/MapView.js"></script>
 <head> 
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -11,8 +13,10 @@
 	<script src="js/Slide.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.5&sensor=false"> </script>
+
 	</head> 
-<body> 
+<body > 
 
 <div data-role="page" >
 
@@ -28,7 +32,7 @@
 		
 <ul data-role="listview" data-inset="true" data-icon="false" data-theme="b" data-input="#myFilter" data-filter="false" class="detailViewDevider">
 		<li  style=" padding: 0em 0em;">
-			<div class="rec" id="pic2" class="DetailViewImage"></div>
+			<div class="rec"><img id="pic2"></img></div>
 		</li>
 		<li class="detailViewDivider">
 			<div id="dayOfweek" class="title">Day of the week: Sunday</div>
@@ -59,11 +63,8 @@
 				<div id="happyfood" class="description">Happy Food</div>
 				<div id="happydrinks" class="description">Happy drinks</div> <br />
 		</li>
-		<li  style=" padding: 0em 0em;background:#E5E4E2; border-top:1px solid #B6B6B6">
-		<div id ="location title"class="Title" style="padding: .7em 1em;">Map to the Happy Place</div>
 			<br />
-			<div class="rec" id="pic3" class="DetailViewImage"></div>
-		</li>
+			<div  class="rec" id="map" class="DetailViewImage" style="border-top:1px solid #B6B6B6"></div>
 
 </ul>	
 		
@@ -74,3 +75,7 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+	Map();
+</script>
