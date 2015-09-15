@@ -10,58 +10,50 @@
 	<link rel="stylesheet" href="css/MasterStyles.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
-	<script src="js/Slide.js"></script>
+	<script src="js/Populate_Detail.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.5&sensor=false"> </script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdDocD5G6lwtZQR7UhKQaS2OQmq0mi0rw" type="text/javascript"></script>
 	</head> 
-<body > 
+<body onload ="	Get_detail()"> 
 
 <div data-role="page" >
 
 	<div style="height:20px" class="dark-primary-color">
 	</div>
 	<div data-role="header" style="box-shadow:0 1px 4px rgba(0,0,0,.37)" >
-				<h1 style="color:#FFCCBC"> Name of Place </h1>
+				<h1 style="color:#FFCCBC" id="name"> Name of Place </h1>
 
 	</div><!-- /header -->
+	<div class="rec"><img id="pic2"></img></div>
 
 
 	<div data-role="content">	
 		
 <ul data-role="listview" data-inset="true" data-icon="false" data-theme="b" data-input="#myFilter" data-filter="false" class="detailViewDevider">
-		<li  style=" padding: 0em 0em;">
-			<div class="rec"><img id="pic2"></img></div>
-		</li>
 		<li class="detailViewDivider">
-			<div id="dayOfweek" class="title">Day of the week: Sunday</div>
-			<div id="happyfood" class="title">Happy Food</div>
-			<div id="happydrinks" class="title">Happy drinks</div><br />
-			<div id="adress" class="title">Address</div> 
+			<div id="dayOfweek" class="title" style="border-bottom:1px #E5E4E2 solid">Today's Happy Hour</div><br />
+			<div id="happyStuff" class="description">Happy drinks</div><br />
+			<div id="address" class="description">Address</div> 
 			
 		</li>
 		<li>
 			<div id ="weekly"class="Title" style="border-bottom:1px #E5E4E2 solid">Weekly Happy Hours</div>
 			<br />
 			<div id="day1" class="description">Monday:</div>
-				<div id="happyfood" class="description">Happy Food<div id="time1" class="description">at time</div></div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="1" class="description">Happy drinks</div> <br />
 			<div id="day2" class="description">Tuesday:</div>
-				<div id="happyfood" class="description">Happy Food</div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="2" class="description">Happy drinks</div> <br />
 			<div id="day3" class="description">Wendsday:</div>
-				<div id="happyfood" class="description">Happy Food</div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="3" class="description">Happy drinks</div> <br />
 			<div id="day4" class="description">Thursday:<div>
-				<div id="happyfood" class="description">Happy Food</div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="4" class="description">Happy drinks</div> <br />
 			<div id="day5" class="description">Friday:<div>
-				<div id="happyfood" class="description">Happy Food</div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="5" class="description">Happy drinks</div> <br />
 			<div id="day6" class="description">Saturday:</div>
-				<div id="happyfood" class="description">Happy Food</div>
-				<div id="happydrinks" class="description">Happy drinks</div> <br />
+				<div id="6" class="description">Happy drinks</div> <br />
+			<div id="day7" class="description">Sunday:</div>
+				<div id="7" class="description">Happy drinks</div> <br />
 		</li>
 			<br />
 			<div  class="rec" id="map" class="DetailViewImage" style="border-top:1px solid #B6B6B6"></div>
@@ -77,5 +69,4 @@
 </html>
 
 <script type="text/javascript">
-	Map();
 </script>
