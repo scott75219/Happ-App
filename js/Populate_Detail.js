@@ -65,11 +65,63 @@ function Map(Lat,Lng)
 
 }
 
+function Get_List()
+{
+var list="";
+var x=0;
+var d = new Date();
+var n = d.getDay();
+		jQuery.ajax({ 
+						url:'php/Get_List.php',
+						type:'GET',
+						data:{date:n},	
+						success: function(response){
+							
+							var Today="";
+							var info = JSON.parse(response);
+							id=info[0].ID;
+							for (var i = 0; i < info.length; i++) 
+							{ 
+								  	if(id!=info[i].ID||i==info.length-1)
+								  	{
+								  		list+="<li>"+
+										"<div><img class=\"rec\" id="+x+" src=https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+info[i-1].Pic+"&key=AIzaSyAdDocD5G6lwtZQR7UhKQaS2OQmq0mi0rw></img></div>"+
+											"<div id= \"Text\" style=\"margin-left:20px;margin-top:5px\">"+
+											"<div id ="+info[i-1].Name+"class=\"Title\">"+info[i-1].Name+"</div>"+
+											"<div id =\"happyStuff\" class=\"description\" style=\"border-bottom:1px #E5E4E2 solid\">"+Today+"</div><br />"+
+											"</div>"+
+										"</li>";
+										x++;
+										id=info[i].ID;
+									}
+									Today+=info[i].Item+" at "+info[i][n]+"<br />";
+	 							
+							}
+						
+							document.getElementById("listview").innerHTML=list;
+							
+
+						},
+						error: function (response, status, err) {
+							console.log("Failure!");
+							console.log(response.responseText);
+						}
+					});
+	
+}
+
 function Pic(ID,Reference){
 
-console.log(Reference);
-		document.getElementById(ID).src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+Reference+"&key=AIzaSyAdDocD5G6lwtZQR7UhKQaS2OQmq0mi0rw";
-
+		pic="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+Reference+"&key=AIzaSyAdDocD5G6lwtZQR7UhKQaS2OQmq0mi0rw";
+		return pic;
+		// jQuery.ajax({
+         //       type: "POST",
+         //       url: "php/Test_Image.php",
+         //       success: function(result) {
+          //          document.getElementById(ID).src=result;
+           //         console.log(JSON.parse(result));
+           //     }
+          // });
 }
 
 
