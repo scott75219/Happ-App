@@ -15,6 +15,7 @@ $array=array();
 while ($row = $result->fetch_assoc()) {
 	array_push($array, $row);
 }
+
 $jsonstring = json_encode($array);
 echo $jsonstring;
 ?>
