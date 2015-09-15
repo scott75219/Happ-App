@@ -11,8 +11,10 @@
 	<script src="js/Slide.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<script src="js/Populate_Detail.js"></script>
+
 	</head> 
-<body> 
+<body onload= "Get_List()"> 
 
 <div data-role="page" >
 
@@ -32,24 +34,16 @@
 
 	<div data-role="content">	
 		
-<ul data-role="listview" data-inset="true" data-icon="false" data-theme="a" data-input="#myFilter" data-filter="false">
+<ul data-role="listview" data-inset="true" data-icon="false" data-theme="a" data-input="#myFilter" data-filter="false" id="listview">
 		<li>
-			<div class="circle" id="pic1"></div>
+			<div class="rec" id="pic1"></div>
 			<div id= "Text" style="margin-left:72px">
 				<div id ="Name"class="Title">Name</div>
 				<div id ="Food"class="description">Food</div>
 				<div id ="Drink" class="description" style="border-bottom:1px #E5E4E2 solid">Drink</div>
 			</div>
 		</li>
-		<li>
-			<div class="circle" id="pic1"></div>
-			<div id= "Text" style="margin-left:72px">
-				<div id ="Name"class="Title">Name</div>
-				<div id ="Food"class="description">Food</div>
-				<div id ="Drink" class="description" style="border-bottom:1px #E5E4E2 solid">Drink</div>
-			</div>
-		
-		</li>
+
 
 </ul>	
 		
